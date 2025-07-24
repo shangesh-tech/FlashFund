@@ -58,80 +58,6 @@ FlashFund is a modern, decentralized crowdfunding platform built on Ethereum tha
 - **Alchemy**: RPC provider for Ethereum interactions
 - **Etherscan**: Contract verification and exploration
 
-## 📋 Prerequisites
-
-Before running this project, make sure you have:
-
-- **Node.js** (v18 or later)
-- **npm** or **yarn**
-- **MetaMask** browser extension
-- **Git**
-- **Ethereum wallet** with some test ETH (for Sepolia testnet)
-
-## 🔧 Installation & Setup
-
-### 1. Clone the Repository
-```bash
-git clone <repository-url>
-cd flashfund
-```
-
-### 2. Install Dependencies
-
-#### Backend (Smart Contracts)
-```bash
-npm install
-```
-
-#### Frontend (Client)
-```bash
-cd client
-npm install
-cd ..
-```
-
-### 3. Environment Configuration
-
-Create a `.env` file in the root directory:
-```env
-ALCHEMY_SEPOLIA_RPC_URL=your_alchemy_sepolia_url
-PRIVATE_KEY=your_wallet_private_key
-ETHERSCAN_API_KEY=your_etherscan_api_key
-```
-
-### 4. Compile Smart Contracts
-```bash
-npx hardhat compile
-```
-
-### 5. Deploy Smart Contracts
-
-#### Local Development
-```bash
-# Start local Hardhat network
-npx hardhat node
-
-# Deploy to local network (in another terminal)
-npx hardhat run scripts/deploy.js --network localhost
-```
-
-#### Sepolia Testnet
-```bash
-npx hardhat run scripts/deploy.js --network sepolia
-```
-
-### 6. Update Contract Address
-
-After deployment, update the `CONTRACT_ADDRESS` in `client/lib/store.js` with your deployed contract address.
-
-### 7. Start the Frontend
-```bash
-cd client
-npm run dev
-```
-
-The application will be available at `http://localhost:3000`
-
 ## 📖 Usage Guide
 
 ### For Campaign Creators
@@ -163,23 +89,6 @@ The application will be available at `http://localhost:3000`
 1. **Fee Management**: Update platform fee percentage (max 10%)
 2. **Emergency Controls**: Pause/unpause contract in emergencies
 3. **Fee Withdrawal**: Withdraw accumulated platform fees
-
-## 🧪 Testing
-
-### Run Smart Contract Tests
-```bash
-npx hardhat test
-```
-
-### Test Contract Interactions
-```bash
-npx hardhat run scripts/interact.js
-```
-
-### Verify Contract on Etherscan
-```bash
-npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
-```
 
 ## 📁 Project Structure
 
@@ -231,19 +140,11 @@ flashfund/
 - **Local Hardhat Network** (Chain ID: 31337)
 - **Ethereum Mainnet** (configurable)
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
-**Shangesh S** - *Initial work*
+**Shangesh S**
 
